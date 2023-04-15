@@ -7,6 +7,8 @@ public class F1 extends Car {
         //Use arbitrary values for parameters which are not mentioned
     }
 
+
+
     public void accelerate(int rate){
         int newSpeed = super.getCurrentSpeed() + rate;
         if(newSpeed == 0)
@@ -36,4 +38,6 @@ public class F1 extends Car {
             changeSpeed(newSpeed, getCurrentDirection());
         }
     }
+
+
 }
