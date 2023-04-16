@@ -7,12 +7,12 @@ public class F1 extends Car {
         //Use arbitrary values for parameters which are not mentioned
     }
 
-
-
     public void accelerate(int rate){
         int newSpeed = super.getCurrentSpeed() + rate;
-        if(newSpeed == 0)
+        if(newSpeed == 0) {
+            super.stop();
             super.changeGear(1);
+        }
         else if(newSpeed >= 1 && newSpeed <= 50)
             super.changeGear(1);
         else if(newSpeed >= 51 && newSpeed <= 100)
@@ -35,7 +35,7 @@ public class F1 extends Car {
          * speed more than 250: gear 6
          */
         if(newSpeed > 0) {
-            changeSpeed(newSpeed, getCurrentDirection());
+        changeSpeed(newSpeed, getCurrentDirection());
         }
     }
 
